@@ -24,15 +24,15 @@ export const Home = ({ navigation }) => {
     return (
         <ScreenContainer>
           <Text>Welcome!</Text>
-          <Button title="Go to Places" onPress={() => navigation.navigate('Details')} 
+          <Button title="Go to Places" onPress={() => navigation.navigate('Places')} 
         />
     </ScreenContainer>
     );
 };
 
-export const Details = () => (
+export const Places = () => (
     <ScreenContainer>
-      <Text>Details Screen</Text>
+      <Text>Places Screen</Text>
     </ScreenContainer>
 );
 
@@ -42,8 +42,8 @@ export const Details = () => (
     </ScreenContainer>
 );*/}
 
-export const Maps = () => (
+{/*export const Maps = () => (
     <ScreenContainer>
       <Text>Here goes the map..</Text>
     </ScreenContainer>
-);
+);*/}

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="446ada0d-2c1d-456b-be29-c906ed00a3eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoisScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/PoisScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screens2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Screens2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -38,10 +41,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="118" y="142" width="1200" height="624" key="AVDManager" timestamp="1612313195421">
+    <state x="118" y="142" width="1200" height="624" key="AVDManager" timestamp="1612786734157">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state x="118" y="142" width="1200" height="624" key="AVDManager/0.0.1474.864@0.0.1474.864" timestamp="1612313195421" />
+    <state x="118" y="142" width="1200" height="624" key="AVDManager/0.0.1474.864@0.0.1474.864" timestamp="1612786734157" />
     <state x="246" y="77" key="SettingsEditor" timestamp="1612187072384">
       <screen x="0" y="0" width="1474" height="864" />
     </state>

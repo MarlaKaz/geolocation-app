@@ -1,20 +1,23 @@
-import React, { useState, useEffect, Component } from 'react';
-import { Platform, Alert, Button, SafeAreaView, FlatList, StatusBar, Text, View, StyleSheet } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { ActivityIndicator, Platform, Alert, Button, SafeAreaView, FlatList, StatusBar, Text, View, StyleSheet } from 'react-native';
 import * as Location from 'expo-location';
 import * as geolib from 'geolib';
-import data2 from './pois.json';
+{/*import data2 from './pois.json';*/}
 
 
 export default function Pois() {
 
- {/* const json_function = () => {
-      fetch('https://warply.s3.amazonaws.com/data/test_pois.json ')
-      .then(response => response.json() )
-      .then(data => console.log(data[1].latitude) )
-      .catch(error => console.log(error));
-  }
-*/}
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    fetch('https://warply.s3.amazonaws.com/data/test_pois.json')
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
+  }, []);
+ 
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
@@ -58,6 +61,16 @@ export default function Pois() {
            <Text >
              {text} 
            </Text>
+           {isLoading ? <ActivityIndicator/> : (
+             <FlatList
+               data={data}
+               keyExtractor={({ id }, index) => id}
+               renderItem={({ item }) => (
+                 <Text>{item.address}</Text>
+                )}
+              />
+            )}
+            {/* Data fetched locally (previous version)
            <FlatList
              data={data2}
              showsVerticalScrollIndicator={false}
@@ -67,7 +80,7 @@ export default function Pois() {
                 </View>
              }
              keyExtractor={(item, index) => index.toString()}
-           />
+            />*/}
         </View>
   );
 }

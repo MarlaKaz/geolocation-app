@@ -5,8 +5,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { Home, Details, Maps } from './Screens2';
+import { Home, Places } from './Screens2';
 import Pois from './PoisScreen';
+import Maps from './MapScreen';
 
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -30,7 +31,7 @@ const MapsStackScreen = () => (
 function BasicTabs() {
   return (
       <Tabs.Navigator>
-        <Tabs.Screen name="Pois" component={Pois} />
+        <Tabs.Screen name="POIs" component={Pois} />
         <Tabs.Screen name="Maps" component={Maps} />
       </Tabs.Navigator>
   );
@@ -42,8 +43,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={BasicTabs} />
-        <Stack.Screen name="Pois" component={BasicTabs} />
+        <Stack.Screen name="Places" component={BasicTabs} />
+        <Stack.Screen name="POIs" component={BasicTabs} />
         <Stack.Screen name="Maps" component={BasicTabs} />
     </Stack.Navigator>
     </NavigationContainer>
